@@ -3,6 +3,20 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
+const token = 'IGQVJYTnp6azBqQU1sSTFDa0hXeDQzRDRkdmp3Ry1FZA1dHV3R3Q3oya3pnNFI0UjcyYU9udFJMN3VqQUJfWm1MSVFYNWUtaC1LTmp5bm5WUFExTmFnV3ZADYV8tRXpXM05lUGJTaGVtYlZAKWkZACMU1HVAZDZD'
+const url = `https://graph.instagram.com/me/media?access_token=${token}&fields=media_url,media_type,caption,permalink`
+
+  fetch(url)
+      .then(res => res.json()) // parse response as JSON
+      .then(data => {
+        console.log(data)
+		if(data.data[0].caption === 'secondP'){
+		document.querySelector('#primeira').src = data.data[0].media_url
+		}
+      })
+      .catch(err => {
+          console.log(`error ${err}`)
+      });
 
 (function($) {
 
