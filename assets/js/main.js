@@ -9,9 +9,15 @@ const url = `https://graph.instagram.com/me/media?access_token=${token}&fields=m
   fetch(url)
       .then(res => res.json()) // parse response as JSON
       .then(data => {
-        console.log(data)
-		if(data.data[0].caption === 'secondP'){
-		document.querySelector('#primeira').src = data.data[0].media_url
+        console.log(data.data[1].media_url)
+		if(data.data[0].caption.includes('Reposição')){
+			document.querySelector('#primeira').src = data.data[0].media_url
+			document.querySelector('#primeirah2').innerText = 'Reposição'
+			document.querySelector('#primeirap').innerText = data.data[0].caption
+		}if(data.data[1].caption === 'promocao'){
+			document.querySelector('#segunda').src = data.data[1].media_url
+		}if(data.data[2].caption === 'promocao2'){
+			document.querySelector('#terceira').src = data.data[2].media_url
 		}
       })
       .catch(err => {

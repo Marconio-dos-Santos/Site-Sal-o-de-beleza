@@ -1,0 +1,22 @@
+{
+  "name": "meu-site-1",
+  "version": "1.0.0",
+  "description": "Site salão de beleza",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Marconio-dos-Santos/Site-Sal-o-de-beleza.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Marconio-dos-Santos/Site-Sal-o-de-beleza/issues"
+  },
+  "homepage": "https://github.com/Marconio-dos-Santos/Site-Sal-o-de-beleza#readme",
+  "dependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
